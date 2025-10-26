@@ -2,7 +2,7 @@
   "id": "steinmetz-brain-dump",
   "name": "Brain Dump",
   "version": "1.0.1",
-  "minAppVersion": "0.15.0",
+  "minAppVersion": "1.9.14",
   "description": "Quick note with automatic organization. Creates timestamped notes and consolidates them by topic. Stop overthinking where to write - just capture your ideas.",
   "author": "Yuri Steinmetz",
   "authorUrl": "https://github.com/YSteinmetz",
