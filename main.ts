@@ -548,5 +548,37 @@ class BrainDumpSettingTab extends PluginSettingTab {
 				text.inputEl.rows = 15;
 				text.inputEl.cols = 50;
 			});
+
+		// Support section
+		containerEl.createEl('h3', {text: '☕ Support'});
+		
+		const supportDiv = containerEl.createDiv();
+		supportDiv.createEl('p', {
+			text: 'If you find this plugin helpful, consider supporting its development!'
+		});
+		
+		const coffeeButton = supportDiv.createEl('a', {
+			href: 'https://buymeacoffee.com/ysteinmetz',
+			text: '☕ Buy me a coffee'
+		});
+		coffeeButton.style.display = 'inline-block';
+		coffeeButton.style.padding = '8px 16px';
+		coffeeButton.style.backgroundColor = '#FFDD00';
+		coffeeButton.style.color = '#000000';
+		coffeeButton.style.textDecoration = 'none';
+		coffeeButton.style.borderRadius = '5px';
+		coffeeButton.style.fontWeight = 'bold';
+		coffeeButton.style.marginTop = '8px';
+		coffeeButton.addEventListener('mouseenter', () => {
+			coffeeButton.style.backgroundColor = '#FFCC00';
+		});
+		coffeeButton.addEventListener('mouseleave', () => {
+			coffeeButton.style.backgroundColor = '#FFDD00';
+		});
+		
+		supportDiv.createEl('p', {
+			text: 'Your support helps keep this project active and enables new features. Thank you! 🙏',
+			cls: 'setting-item-description'
+		});
 	}
 }

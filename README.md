@@ -42,7 +42,7 @@ Whenever I mention Kasten, I'm referring to the Zettelkasten note organization s
 
 ### Manual Installation
 
-1. Download the latest release from [GitHub](https://github.com/your-username/obsidian-brain-dump/releases)
+1. Download the latest release from [GitHub](https://github.com/YSteinmetz/brain-dump/releases)
 2. Extract files to `.obsidian/plugins/brain-dump/` in your vault
 3. Reload Obsidian
 4. Enable the plugin in Settings → Community Plugins
@@ -140,8 +140,8 @@ Related links:
 
 ```bash
 # Clone repository
-git clone https://github.com/your-username/obsidian-brain-dump
-cd obsidian-brain-dump
+git clone https://github.com/YSteinmetz/brain-dump
+cd brain-dump
 
 # Install dependencies
 npm install
@@ -177,9 +177,17 @@ npm run build
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to:
-- Report bugs via [Issues](https://github.com/your-username/obsidian-brain-dump/issues)
+- Report bugs via [Issues](https://github.com/YSteinmetz/brain-dump/issues)
 - Suggest new features
 - Submit pull requests
+
+## ☕ Support
+
+If you find this plugin helpful and want to support its development, you can buy me a coffee!
+
+[![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png)](https://buymeacoffee.com/ysteinmetz)
+
+Your support helps keep this project active and enables new features. Thank you! 🙏
 
 ## 📄 License
 
@@ -219,7 +227,7 @@ Wann immer ich Kasten erwähne, beziehe ich mich auf das Zettelkasten-Notizorgan
 
 ### Manuelle Installation
 
-1. Lade die neueste Version von [GitHub](https://github.com/your-username/obsidian-brain-dump/releases) herunter
+1. Lade die neueste Version von [GitHub](https://github.com/YSteinmetz/brain-dump/releases) herunter
 2. Extrahiere die Dateien nach `.obsidian/plugins/brain-dump/` in deinem Vault
 3. Lade Obsidian neu
 4. Aktiviere das Plugin unter Einstellungen → Community Plugins
@@ -317,8 +325,8 @@ Verwandte Links:
 
 ```bash
 # Repository klonen
-git clone https://github.com/your-username/obsidian-brain-dump
-cd obsidian-brain-dump
+git clone https://github.com/YSteinmetz/brain-dump
+cd brain-dump
 
 # Abhängigkeiten installieren
 npm install
@@ -354,9 +362,17 @@ npm run build
 ## 🤝 Mitwirken
 
 Beiträge sind willkommen! Zögere nicht:
-- Bugs über [Issues](https://github.com/your-username/obsidian-brain-dump/issues) zu melden
+- Bugs über [Issues](https://github.com/YSteinmetz/brain-dump/issues) zu melden
 - Neue Funktionen vorzuschlagen
 - Pull Requests zu senden
+
+## ☕ Unterstützung
+
+Wenn du dieses Plugin hilfreich findest und die Entwicklung unterstützen möchtest, kannst du mir einen Kaffee kaufen!
+
+[![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png)](https://buymeacoffee.com/ysteinmetz)
+
+Deine Unterstützung hilft dabei, dieses Projekt aktiv zu halten und neue Funktionen zu ermöglichen. Vielen Dank! 🙏
 
 ## 📄 Lizenz
 
@@ -396,7 +412,7 @@ Cada vez que mencione Kasten me refiero al sistema de organización de notas Zet
 
 ### Instalación Manual
 
-1. Descarga la última versión desde [GitHub](https://github.com/your-username/obsidian-brain-dump/releases)
+1. Descarga la última versión desde [GitHub](https://github.com/YSteinmetz/brain-dump/releases)
 2. Extrae los archivos a `.obsidian/plugins/brain-dump/` en tu vault
 3. Recarga Obsidian
 4. Activa el plugin en Configuraciones → Community Plugins
@@ -494,8 +510,8 @@ Enlaces relacionados:
 
 ```bash
 # Clonar repositorio
-git clone https://github.com/your-username/obsidian-brain-dump
-cd obsidian-brain-dump
+git clone https://github.com/YSteinmetz/brain-dump
+cd brain-dump
 
 # Instalar dependencias
 npm install
@@ -531,9 +547,17 @@ npm run build
 ## 🤝 Contribuir
 
 ¡Las contribuciones son bienvenidas! Siéntete libre de:
-- Reportar bugs a través de [Issues](https://github.com/your-username/obsidian-brain-dump/issues)
+- Reportar bugs a través de [Issues](https://github.com/YSteinmetz/brain-dump/issues)
 - Sugerir nuevas características
 - Enviar pull requests
+
+## ☕ Apoyo
+
+Si encuentras este plugin útil y quieres apoyar su desarrollo, ¡puedes invitarme un café!
+
+[![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png)](https://buymeacoffee.com/ysteinmetz)
+
+Tu apoyo ayuda a mantener este proyecto activo y permite nuevas características. ¡Gracias! 🙏
 
 ## 📄 Licencia
 
@@ -573,7 +597,7 @@ Obsidian 快速笔记捕获插件，具有自动组织功能。
 
 ### 手动安装
 
-1. 从 [GitHub](https://github.com/your-username/obsidian-brain-dump/releases) 下载最新版本
+1. 从 [GitHub](https://github.com/YSteinmetz/brain-dump/releases) 下载最新版本
 2. 将文件解压到你的 vault 中的 `.obsidian/plugins/brain-dump/`
 3. 重新加载 Obsidian
 4. 在设置 → Community Plugins 中启用插件
@@ -671,8 +695,8 @@ tags: []
 
 ```bash
 # 克隆仓库
-git clone https://github.com/your-username/obsidian-brain-dump
-cd obsidian-brain-dump
+git clone https://github.com/YSteinmetz/brain-dump
+cd brain-dump
 
 # 安装依赖
 npm install
@@ -708,9 +732,17 @@ npm run build
 ## 🤝 贡献
 
 欢迎贡献！请随时：
-- 通过 [Issues](https://github.com/your-username/obsidian-brain-dump/issues) 报告错误
+- 通过 [Issues](https://github.com/YSteinmetz/brain-dump/issues) 报告错误
 - 建议新功能
 - 提交 pull requests
+
+## ☕ 支持
+
+如果你觉得这个插件有用并想支持开发，可以请我喝杯咖啡！
+
+[![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png)](https://buymeacoffee.com/ysteinmetz)
+
+你的支持有助于保持这个项目的活跃并实现新功能。谢谢！🙏
 
 ## 📄 许可证
 
@@ -750,7 +782,7 @@ Toda vez que dizer Kasten estou me referindo ao sistema de organizações de not
 
 ### Manual
 
-1. Baixe a última release do [GitHub](https://github.com/seu-usuario/obsidian-brain-dump/releases)
+1. Baixe a última release do [GitHub](https://github.com/YSteinmetz/brain-dump/releases)
 2. Extraia os arquivos para `.obsidian/plugins/brain-dump/` no seu vault
 3. Recarregue o Obsidian
 4. Ative o plugin em Settings → Community Plugins
@@ -848,8 +880,8 @@ Links relacionados:
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/obsidian-brain-dump
-cd obsidian-brain-dump
+git clone https://github.com/YSteinmetz/brain-dump
+cd brain-dump
 
 # Instale dependências
 npm install
@@ -885,9 +917,17 @@ npm run build
 ## 🤝 Contribuindo
 
 Contribuições são bem-vindas! Sinta-se livre para:
-- Reportar bugs via [Issues](https://github.com/seu-usuario/obsidian-brain-dump/issues)
+- Reportar bugs via [Issues](https://github.com/YSteinmetz/brain-dump/issues)
 - Sugerir novas funcionalidades
 - Enviar pull requests
+
+## ☕ Apoio
+
+Se este plugin te ajuda e você quer apoiar seu desenvolvimento, pode me pagar um café!
+
+[![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png)](https://buymeacoffee.com/ysteinmetz)
+
+Seu apoio ajuda a manter este projeto ativo e permite novas funcionalidades. Obrigado! 🙏
 
 ## 📄 Licença
 
