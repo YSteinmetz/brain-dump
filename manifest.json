@@ -1,11 +1,11 @@
 {
-  "id": "brain-dump",
+  "id": "steinmetz-brain-dump",
   "name": "Brain Dump",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minAppVersion": "0.15.0",
-  "description": "Quick capture plugin for Obsidian with automatic organization. Creates timestamped notes with context tracking, tags, and automatic MOC generation.",
+  "description": "Quick note with automatic organization. Creates timestamped notes and consolidates them by topic. Stop overthinking where to write - just capture your ideas.",
   "author": "Yuri",
-  "authorUrl": "",
-  "fundingUrl": "",
+  "authorUrl": "https://github.com/YSteinmetz",
+  "fundingUrl": "https://buymeacoffee.com/ysteinmetz",
   "isDesktopOnly": false
 }
