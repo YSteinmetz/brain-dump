@@ -1,0 +1,21 @@
+# Logs
+*.log
+
+# npm
+node_modules
+package-lock.json
+
+# Build files
+main.js
+main.js.map
+*.js.map
+
+# Obsidian
+.obsidian/
+
+# Editor
+.vscode/
+.DS_Store
+
+# Github files
+.github/

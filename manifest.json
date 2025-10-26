@@ -1,0 +1,11 @@
+{
+  "id": "brain-dump",
+  "name": "Brain Dump",
+  "version": "1.0.0",
+  "minAppVersion": "0.15.0",
+  "description": "Quick capture plugin for Obsidian with automatic organization. Creates timestamped notes with context tracking, tags, and automatic MOC generation.",
+  "author": "Yuri",
+  "authorUrl": "",
+  "fundingUrl": "",
+  "isDesktopOnly": false
+}
