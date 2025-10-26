@@ -13,6 +13,9 @@ main.js.map
 # Obsidian
 .obsidian/
 
+# Obsidian plugin release files
+*.zip
+
 # Editor
 .vscode/
 .DS_Store

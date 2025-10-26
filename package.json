@@ -14,7 +14,7 @@
     "quick-capture",
     "brain-dump"
   ],
-  "author": "Yuri",
+  "author": "Yuri Steinmetz",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^16.11.6",
