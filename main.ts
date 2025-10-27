@@ -21,14 +21,14 @@ tags: []
 
 # {{title}}
 
-## Conteúdo
+## Content
 
 
 ## Tasks
-- [ ] 
+
 
 ---
-Links relacionados: `,
+Related Links: `,
 	enableDailyNote: true,
 	dailyNoteFolder: 'Daily Notes',
 	enableMOC: true,
@@ -51,8 +51,8 @@ export default class BrainDumpPlugin extends Plugin {
 
 		// Add command (hotkey configured in Obsidian Settings → Hotkeys)
 		this.addCommand({
-			id: 'create-brain-dump-note',
-			name: 'Create Brain Dump Note',
+			id: 'create-note',
+			name: 'Create Note',
 			callback: () => {
 				this.createBrainDumpNote();
 			}
@@ -65,7 +65,7 @@ export default class BrainDumpPlugin extends Plugin {
 			callback: async () => {
 				const topics = await this.getKastenTopics();
 				if (topics.length === 0) {
-					new Notice('⚠️ Nenhum tópico kasten encontrado. Use tags como #kasten/nome-topico');
+					new Notice('No kasten topics found. Use tags like #kasten/topic-name');
 					return;
 				}
 				
@@ -81,9 +81,9 @@ export default class BrainDumpPlugin extends Plugin {
 				}
 				
 				if (successCount > 0) {
-					new Notice(`✅ ${successCount} tópico(s) kasten consolidado(s)!`);
+					new Notice(`✅ ${successCount} kasten topic(s) consolidated!`);
 				} else {
-					new Notice(`❌ Erro ao consolidar tópicos kasten`);
+					new Notice(`❌ Error consolidating kasten topics`);
 				}
 			}
 		});
@@ -291,9 +291,9 @@ export default class BrainDumpPlugin extends Plugin {
 			const sections = await this.organizeNotesBySections(notes, topic);
 			
 			// Generate consolidated content
-			let consolidatedContent = `# ${topic}\n\n`;
-			consolidatedContent += `> Nota consolidada automática - ${notes.length} notas\n`;
-			consolidatedContent += `> Última atualização: ${moment().format('YYYY-MM-DD HH:mm')}\n\n`;
+			let consolidatedContent = `# ${topic}\n\n`;			
+			consolidatedContent += `> Automatic note consolidation - ${notes.length} notes\n`;
+			consolidatedContent += `> Last updated: ${moment().format('YYYY-MM-DD HH:mm')}\n\n`;
 			consolidatedContent += `---\n\n`;
 			
 			// Add sections
@@ -316,19 +316,19 @@ export default class BrainDumpPlugin extends Plugin {
 			if (existingFile instanceof TFile) {
 				await this.app.vault.modify(existingFile, consolidatedContent);
 				if (showNotice) {
-					new Notice(`✅ Kasten "${topic}" atualizado! (${notes.length} notas)`);
+					new Notice(`✅ Kasten "${topic}" updated! (${notes.length} notes)`);
 				}
 			} else {
 				await this.app.vault.create(kastenPath, consolidatedContent);
 				if (showNotice) {
-					new Notice(`✅ Kasten "${topic}" criado! (${notes.length} notas)`);
+					new Notice(`✅ Kasten "${topic}" created! (${notes.length} notes)`);
 				}
 			}
 			
 		} catch (error) {
 			console.error('Error consolidating kasten:', error);
 			if (showNotice) {
-				new Notice(`❌ Erro ao consolidar kasten "${topic}": ${error.message}`);
+				new Notice(`❌ Error consolidating kasten "${topic}": ${error.message}`);
 			}
 		}
 	}
@@ -368,7 +368,7 @@ export default class BrainDumpPlugin extends Plugin {
 			// Try to find a section header (## Section Name)
 			const sectionMatch = content.match(/^##\s+(.+)$/m);
 			
-			if (sectionMatch && sectionMatch[1] !== 'Conteúdo' && sectionMatch[1] !== 'Tasks') {
+			if (sectionMatch && sectionMatch[1] !== 'Content' && sectionMatch[1] !== 'Tasks') {
 				const sectionName = sectionMatch[1].trim();
 				if (!sections[sectionName]) {
 					sections[sectionName] = [];
@@ -528,7 +528,7 @@ class BrainDumpSettingTab extends PluginSettingTab {
 		containerEl.createEl('h3', {text: 'Keyboard Shortcut'});
 		
 		containerEl.createEl('p', {
-			text: '⌨️ To configure the keyboard shortcut, go to: Settings → Hotkeys → Search for "Brain Dump"',
+			text: 'To configure the keyboard shortcut, go to: Settings → Hotkeys → Search for "Brain Dump"',
 			cls: 'setting-item-description'
 		});
 
@@ -547,38 +547,7 @@ class BrainDumpSettingTab extends PluginSettingTab {
 					});
 				text.inputEl.rows = 15;
 				text.inputEl.cols = 50;
-			});
-
-		// Support section
-		containerEl.createEl('h3', {text: '☕ Support'});
+			});		
 		
-		const supportDiv = containerEl.createDiv();
-		supportDiv.createEl('p', {
-			text: 'If you find this plugin helpful, consider supporting its development!'
-		});
-		
-		const coffeeButton = supportDiv.createEl('a', {
-			href: 'https://buymeacoffee.com/ysteinmetz',
-			text: '☕ Buy me a coffee'
-		});
-		coffeeButton.style.display = 'inline-block';
-		coffeeButton.style.padding = '8px 16px';
-		coffeeButton.style.backgroundColor = '#FFDD00';
-		coffeeButton.style.color = '#000000';
-		coffeeButton.style.textDecoration = 'none';
-		coffeeButton.style.borderRadius = '5px';
-		coffeeButton.style.fontWeight = 'bold';
-		coffeeButton.style.marginTop = '8px';
-		coffeeButton.addEventListener('mouseenter', () => {
-			coffeeButton.style.backgroundColor = '#FFCC00';
-		});
-		coffeeButton.addEventListener('mouseleave', () => {
-			coffeeButton.style.backgroundColor = '#FFDD00';
-		});
-		
-		supportDiv.createEl('p', {
-			text: 'Your support helps keep this project active and enables new features. Thank you! 🙏',
-			cls: 'setting-item-description'
-		});
 	}
 }
