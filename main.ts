@@ -5,8 +5,6 @@ interface BrainDumpSettings {
 	templateContent: string;
 	enableDailyNote: boolean;
 	dailyNoteFolder: string;
-	enableMOC: boolean;
-	mocFolder: string;
 	enableKasten: boolean;
 	kastenFolder: string;
 	autoUpdateKasten: boolean;
@@ -31,8 +29,6 @@ tags: []
 Related Links: `,
 	enableDailyNote: true,
 	dailyNoteFolder: 'Daily Notes',
-	enableMOC: true,
-	mocFolder: 'MOC',
 	enableKasten: true,
 	kastenFolder: 'Kasten',
 	autoUpdateKasten: true
@@ -170,42 +166,6 @@ export default class BrainDumpPlugin extends Plugin {
 		}
 	}
 
-	async updateMOCForTag(tag: string, noteTitle: string) {
-		if (!this.settings.enableMOC) return;
-
-		try {
-			await this.ensureFolderExists(this.settings.mocFolder);
-			
-			const mocName = tag.startsWith('#') ? tag.substring(1) : tag;
-			const mocPath = `${this.settings.mocFolder}/_INDEX - ${mocName}.md`;
-			let mocFile = this.app.vault.getAbstractFileByPath(mocPath);
-
-			if (!mocFile) {
-				// Create MOC
-				const mocContent = `# ${mocName}\n\n## Notas\n- [[${noteTitle}]]\n`;
-				await this.app.vault.create(mocPath, mocContent);
-			} else if (mocFile instanceof TFile) {
-				// Update existing MOC
-				const content = await this.app.vault.read(mocFile);
-				
-				if (!content.includes(`[[${noteTitle}]]`)) {
-					if (content.includes('## Notas')) {
-						const updatedContent = content.replace(
-							/(## Notas\n)/,
-							`$1- [[${noteTitle}]]\n`
-						);
-						await this.app.vault.modify(mocFile, updatedContent);
-					} else {
-						const updatedContent = content + `\n## Notas\n- [[${noteTitle}]]\n`;
-						await this.app.vault.modify(mocFile, updatedContent);
-					}
-				}
-			}
-		} catch (error) {
-			console.error('Error updating MOC:', error);
-		}
-	}
-
 	async ensureFolderExists(folderPath: string) {
 		const folder = this.app.vault.getAbstractFileByPath(folderPath);
 		if (!folder) {
@@ -213,24 +173,11 @@ export default class BrainDumpPlugin extends Plugin {
 		}
 	}
 
-	// Register event to watch for tags in notes and update MOCs
+	// Register event to watch for tags in notes and update Kasten
 	async onModify(file: TFile) {
 		if (!file.path.startsWith(this.settings.notesFolder)) return;
 
 		const content = await this.app.vault.read(file);
-		
-		// Update MOCs for regular tags (ignore #project/* and #kasten/*)
-		const tagRegex = /#[\w-]+/g;
-		const tags = content.match(tagRegex);
-
-		if (tags && this.settings.enableMOC) {
-			for (const tag of tags) {
-				// Skip project and kasten tags for MOC
-				if (!tag.startsWith('#project/') && !tag.startsWith('#kasten/')) {
-					await this.updateMOCForTag(tag, file.basename);
-				}
-			}
-		}
 
 		// Update Kasten consolidations (silently, without notifications)
 		if (this.settings.enableKasten && this.settings.autoUpdateKasten) {
@@ -468,27 +415,6 @@ class BrainDumpSettingTab extends PluginSettingTab {
 				.setValue(this.plugin.settings.dailyNoteFolder)
 				.onChange(async (value) => {
 					this.plugin.settings.dailyNoteFolder = value;
-					await this.plugin.saveSettings();
-				}));
-
-		new Setting(containerEl)
-			.setName('Enable MOC (Map of Content)')
-			.setDesc('Automatically create and update index files by tags')
-			.addToggle(toggle => toggle
-				.setValue(this.plugin.settings.enableMOC)
-				.onChange(async (value) => {
-					this.plugin.settings.enableMOC = value;
-					await this.plugin.saveSettings();
-				}));
-
-		new Setting(containerEl)
-			.setName('MOC folder')
-			.setDesc('Folder where MOC index files will be created')
-			.addText(text => text
-				.setPlaceholder('MOC')
-				.setValue(this.plugin.settings.mocFolder)
-				.onChange(async (value) => {
-					this.plugin.settings.mocFolder = value;
 					await this.plugin.saveSettings();
 				}));
 
