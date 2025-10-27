@@ -24,7 +24,6 @@ Whenever I mention Kasten, I'm referring to the Zettelkasten note organization s
 - **Timestamped**: Notes created with `YYYY-MM-DD HH-mm.md` format
 - **Automatic Template**: Pre-defined and customizable tags and sections in settings
 - **Daily Notes**: Automatic links in daily notes
-- **Automatic MOC**: Indexes created by tags automatically
 - **Kasten (Consolidation)**: Automatically consolidates notes by topic using `#kasten/topic`
 - **Tasks Integration**: Complete support for tasks
 - **Sidebar Button**: 🧠 icon for quick access
@@ -56,8 +55,6 @@ Access settings at: **Settings → Brain Dump**
 - **Notes folder**: Folder where notes will be created (default: `Notes`)
 - **Enable Daily Notes**: Enable/disable daily notes integration
 - **Daily Notes folder**: Daily notes folder (default: `Daily Notes`)
-- **Enable MOC**: Enable/disable automatic index creation
-- **MOC folder**: Folder where indexes will be created (default: `MOC`)
 - **Enable Kasten Consolidation**: Enable/disable automatic knowledge consolidation
 - **Kasten folder**: Folder where consolidated notes will be created (default: `Kasten`)
 - **Auto-update Kasten**: Automatically update when modifying notes
@@ -121,9 +118,7 @@ Related links:
 
 - Add tags in `#tag` format in the note body
 - Use `#kasten/topic` for automatic knowledge consolidation
-- The plugin will automatically create:
-  - MOC index files in `MOC/_INDEX - tag.md`
-  - Consolidated Kasten notes in `Kasten/topic.md`
+- The plugin will automatically create consolidated Kasten notes in `Kasten/topic.md`
 
 > 💡 **Kasten**: Use `#kasten/javascript` to consolidate all your notes about a specific theme into a single organized document!
 
@@ -131,7 +126,6 @@ Related links:
 
 - Use Obsidian search to find content
 - Check your Daily Notes to see all notes from the day
-- Access MOC indexes to see notes by category
 - Consult Kasten files for consolidated knowledge review
 
 ## 🛠️ Development
@@ -171,7 +165,6 @@ npm run build
 2. **Tags**: Add relevant tags (#kasten/work, #kasten/study, #project, etc.)
 3. **Review**: 
    - Check Daily Notes for chronological view
-   - Use MOC indexes for thematic view
    - Access Kasten files for consolidated knowledge
 
 ## 🤝 Contributing
@@ -209,7 +202,6 @@ Wann immer ich Kasten erwähne, beziehe ich mich auf das Zettelkasten-Notizorgan
 - **Zeitstempel**: Notizen im Format `YYYY-MM-DD HH-mm.md` erstellt
 - **Automatische Vorlage**: Vordefinierte und anpassbare Tags und Abschnitte in den Einstellungen
 - **Tägliche Notizen**: Automatische Links in täglichen Notizen
-- **Automatisches MOC**: Indizes werden automatisch nach Tags erstellt
 - **Kasten (Konsolidierung)**: Konsolidiert automatisch Notizen nach Thema mit `#kasten/thema`
 - **Tasks-Integration**: Vollständige Unterstützung für Aufgaben
 - **Seitenleisten-Button**: 🧠 Symbol für schnellen Zugriff
@@ -241,8 +233,6 @@ Zugriff auf Einstellungen unter: **Einstellungen → Brain Dump**
 - **Notes folder**: Ordner, in dem Notizen erstellt werden (Standard: `Notes`)
 - **Enable Daily Notes**: Integration mit täglichen Notizen aktivieren/deaktivieren
 - **Daily Notes folder**: Ordner für tägliche Notizen (Standard: `Daily Notes`)
-- **Enable MOC**: Automatische Indexerstellung aktivieren/deaktivieren
-- **MOC folder**: Ordner, in dem Indizes erstellt werden (Standard: `MOC`)
 - **Enable Kasten Consolidation**: Automatische Wissenskonsolidierung aktivieren/deaktivieren
 - **Kasten folder**: Ordner, in dem konsolidierte Notizen erstellt werden (Standard: `Kasten`)
 - **Auto-update Kasten**: Automatisch aktualisieren beim Ändern von Notizen
@@ -306,9 +296,7 @@ Verwandte Links:
 
 - Füge Tags im Format `#tag` im Notiztext hinzu
 - Verwende `#kasten/thema` für automatische Wissenskonsolidierung
-- Das Plugin erstellt automatisch:
-  - MOC-Indexdateien in `MOC/_INDEX - tag.md`
-  - Konsolidierte Kasten-Notizen in `Kasten/thema.md`
+- Das Plugin erstellt automatisch konsolidierte Kasten-Notizen in `Kasten/thema.md`
 
 > 💡 **Kasten**: Verwende `#kasten/javascript`, um alle deine Notizen zu einem bestimmten Thema in einem einzigen organisierten Dokument zu konsolidieren!
 
@@ -316,7 +304,6 @@ Verwandte Links:
 
 - Verwende die Obsidian-Suche, um Inhalte zu finden
 - Überprüfe deine täglichen Notizen, um alle Notizen des Tages zu sehen
-- Greife auf MOC-Indizes zu, um Notizen nach Kategorie zu sehen
 - Konsultiere Kasten-Dateien für konsolidierte Wissensüberprüfung
 
 ## 🛠️ Entwicklung
@@ -356,7 +343,6 @@ npm run build
 2. **Tags**: Füge relevante Tags hinzu (#kasten/arbeit, #kasten/studium, #projekt, etc.)
 3. **Überprüfung**: 
    - Überprüfe tägliche Notizen für chronologische Sicht
-   - Verwende MOC-Indizes für thematische Sicht
    - Greife auf Kasten-Dateien für konsolidiertes Wissen zu
 
 ## 🤝 Mitwirken
@@ -394,7 +380,6 @@ Cada vez que mencione Kasten me refiero al sistema de organización de notas Zet
 - **Con Marca de Tiempo**: Notas creadas con formato `YYYY-MM-DD HH-mm.md`
 - **Plantilla Automática**: Etiquetas y secciones predefinidas y personalizables en configuraciones
 - **Notas Diarias**: Enlaces automáticos en notas diarias
-- **MOC Automático**: Índices creados por etiquetas automáticamente
 - **Kasten (Consolidación)**: Consolida automáticamente notas por tema usando `#kasten/tema`
 - **Integración de Tareas**: Soporte completo para tareas
 - **Botón Lateral**: Icono 🧠 para acceso rápido
@@ -426,8 +411,6 @@ Accede a configuraciones en: **Configuraciones → Brain Dump**
 - **Notes folder**: Carpeta donde se crearán las notas (predeterminado: `Notes`)
 - **Enable Daily Notes**: Activar/desactivar integración con notas diarias
 - **Daily Notes folder**: Carpeta de notas diarias (predeterminado: `Daily Notes`)
-- **Enable MOC**: Activar/desactivar creación automática de índices
-- **MOC folder**: Carpeta donde se crearán los índices (predeterminado: `MOC`)
 - **Enable Kasten Consolidation**: Activar/desactivar consolidación automática de conocimiento
 - **Kasten folder**: Carpeta donde se crearán las notas consolidadas (predeterminado: `Kasten`)
 - **Auto-update Kasten**: Actualizar automáticamente al modificar notas
@@ -491,9 +474,7 @@ Enlaces relacionados:
 
 - Añade etiquetas en formato `#etiqueta` en el cuerpo de la nota
 - Usa `#kasten/tema` para consolidación automática de conocimiento
-- El plugin creará automáticamente:
-  - Archivos índice MOC en `MOC/_INDEX - etiqueta.md`
-  - Notas Kasten consolidadas en `Kasten/tema.md`
+- El plugin creará automáticamente notas Kasten consolidadas en `Kasten/tema.md`
 
 > 💡 **Kasten**: ¡Usa `#kasten/javascript` para consolidar todas tus notas sobre un tema específico en un solo documento organizado!
 
@@ -501,7 +482,6 @@ Enlaces relacionados:
 
 - Usa la búsqueda de Obsidian para encontrar contenido
 - Revisa tus Notas Diarias para ver todas las notas del día
-- Accede a índices MOC para ver notas por categoría
 - Consulta archivos Kasten para revisión consolidada de conocimiento
 
 ## 🛠️ Desarrollo
@@ -541,7 +521,6 @@ npm run build
 2. **Etiquetas**: Añade etiquetas relevantes (#kasten/trabajo, #kasten/estudio, #proyecto, etc.)
 3. **Revisar**: 
    - Revisa Notas Diarias para vista cronológica
-   - Usa índices MOC para vista temática
    - Accede a archivos Kasten para conocimiento consolidado
 
 ## 🤝 Contribuir
@@ -579,7 +558,6 @@ Obsidian 快速笔记捕获插件，具有自动组织功能。
 - **时间戳**: 以 `YYYY-MM-DD HH-mm.md` 格式创建笔记
 - **自动模板**: 在设置中预定义和可自定义的标签和部分
 - **每日笔记**: 每日笔记中的自动链接
-- **自动 MOC**: 按标签自动创建索引
 - **Kasten（整合）**: 使用 `#kasten/主题` 自动按主题整合笔记
 - **任务集成**: 完整的任务支持
 - **侧边栏按钮**: 🧠 图标快速访问
@@ -611,8 +589,6 @@ Obsidian 快速笔记捕获插件，具有自动组织功能。
 - **Notes folder**: 创建笔记的文件夹（默认：`Notes`）
 - **Enable Daily Notes**: 启用/禁用每日笔记集成
 - **Daily Notes folder**: 每日笔记文件夹（默认：`Daily Notes`）
-- **Enable MOC**: 启用/禁用自动索引创建
-- **MOC folder**: 创建索引的文件夹（默认：`MOC`）
 - **Enable Kasten Consolidation**: 启用/禁用自动知识整合
 - **Kasten folder**: 创建整合笔记的文件夹（默认：`Kasten`）
 - **Auto-update Kasten**: 修改笔记时自动更新
@@ -676,9 +652,7 @@ tags: []
 
 - 在笔记正文中添加 `#标签` 格式的标签
 - 使用 `#kasten/主题` 进行自动知识整合
-- 插件将自动创建：
-  - `MOC/_INDEX - 标签.md` 中的 MOC 索引文件
-  - `Kasten/主题.md` 中的整合 Kasten 笔记
+- 插件将自动在 `Kasten/主题.md` 中创建整合 Kasten 笔记
 
 > 💡 **Kasten**: 使用 `#kasten/javascript` 将所有关于特定主题的笔记整合到一个有组织的文档中！
 
@@ -686,7 +660,6 @@ tags: []
 
 - 使用 Obsidian 搜索查找内容
 - 检查你的每日笔记以查看当天的所有笔记
-- 访问 MOC 索引按类别查看笔记
 - 查阅 Kasten 文件进行整合知识审查
 
 ## 🛠️ 开发
@@ -726,7 +699,6 @@ npm run build
 2. **标签**: 添加相关标签（#kasten/工作、#kasten/学习、#项目等）
 3. **审查**: 
    - 检查每日笔记以获得时间顺序视图
-   - 使用 MOC 索引获得主题视图
    - 访问 Kasten 文件获得整合知识
 
 ## 🤝 贡献
@@ -764,7 +736,6 @@ Toda vez que dizer Kasten estou me referindo ao sistema de organizações de not
 - **Timestamped**: Notas criadas com formato `YYYY-MM-DD HH-mm.md`
 - **Template Automático**: Tags e seções pré-definidas e personalizáveis nas configurações
 - **Daily Notes**: Links automáticos nas notas diárias
-- **MOC Automático**: Índices criados por tags automaticamente
 - **Kasten (Consolidação)**: Consolida automaticamente notas por tópico usando `#kasten/topico`
 - **Tasks Integration**: Suporte completo para tasks
 - **Botão Lateral**: Ícone 🧠 para acesso rápido
@@ -796,8 +767,6 @@ Acesse as configurações em: **Settings → Brain Dump**
 - **Notes folder**: Pasta onde as notas serão criadas (padrão: `Notes`)
 - **Enable Daily Notes**: Ativar/desativar integração com notas diárias
 - **Daily Notes folder**: Pasta das notas diárias (padrão: `Daily Notes`)
-- **Enable MOC**: Ativar/desativar criação automática de índices
-- **MOC folder**: Pasta onde os índices serão criados (padrão: `MOC`)
 - **Enable Kasten Consolidation**: Ativar/desativar consolidação automática de conhecimento
 - **Kasten folder**: Pasta onde as notas consolidadas serão criadas (padrão: `Kasten`)
 - **Auto-update Kasten**: Atualizar automaticamente ao modificar notas
@@ -861,9 +830,7 @@ Links relacionados:
 
 - Adicione tags no formato `#tag` no corpo da nota
 - Use `#kasten/topico` para consolidação automática de conhecimento
-- O plugin criará automaticamente:
-  - Arquivos índice MOC em `MOC/_INDEX - tag.md`
-  - Notas consolidadas Kasten em `Kasten/topico.md`
+- O plugin criará automaticamente notas consolidadas Kasten em `Kasten/topico.md`
 
 > 💡 **Kasten**: Use `#kasten/javascript` para consolidar todas suas notas sobre um tema específico em um único documento organizado!
 
@@ -871,7 +838,6 @@ Links relacionados:
 
 - Use a busca do Obsidian para encontrar conteúdo
 - Verifique suas Daily Notes para ver todas as notas do dia
-- Acesse os índices MOC para ver notas por categoria
 - Consulte arquivos Kasten para revisão consolidada de conhecimento
 
 ## 🛠️ Desenvolvimento
@@ -911,7 +877,6 @@ npm run build
 2. **Tags**: Adicione tags relevantes (#kasten/trabalho, #kasten/estudo, #projeto, etc.)
 3. **Revisão**: 
    - Consulte Daily Notes para visão cronológica
-   - Use índices MOC para visão por tema
    - Acesse arquivos Kasten para conhecimento consolidado
 
 ## 🤝 Contribuindo
